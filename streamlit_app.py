@@ -1,6 +1,15 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 import streamlit as st
 
-st.title("🎈 My new app")
+st.title("🎈 Bike Sharing")
 st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
+    "."
 )
+
+with st.sidebar:
+    start_date, end_date = st.date_input(
+        label='Rentang Waktu',min_value=min_date,
+        max_value=max_date,
+        value=[min_date, max_date]
